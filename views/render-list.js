@@ -1,6 +1,38 @@
 debugger;
 
-const renderList = () => { };
+const renderList = (arr, displayed) => { 
+  // let's fallow testRenderList asserts..
+  // testing asserts say us first we need a div..
+  let divEl = document.createElement('DIV');
+
+  // and its id must be..
+  divEl.setAttribute('id', displayed);
+
+  // we need to create 2 of its child..
+  // its first child must be <H4>..
+  let h4El = document.createElement('H4');
+  h4El.innerHTML = displayed;
+  divEl.appendChild(h4El);
+
+  // second child maybe <ul>..
+  let ulEl = document.createElement('UL');
+
+  // we need to create x(length of arr) times of <li> elements
+  for (let i of arr) {
+    // create <li> elements.. and set their inner texts arr values at the specific index. 
+    let liEl = document.createElement('LI');
+    liEl.innerText = i;
+
+    // and append it to our second child <ul>
+    ulEl.appendChild(liEl);
+  }
+  
+  // we append our second child to DIV
+  divEl.appendChild(ulEl);
+
+  // and return DIV as a result.
+  return divEl;
+};
 
 
 console.log('-- testing renderList component --\n');
