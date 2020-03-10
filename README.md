@@ -13,11 +13,7 @@
 
 ## General info
 
-This is a website that sorts user-provided strings into two categories, _NaNy_ and _Numbery_.
-
-- Further specifications:
-  - If a user inputs the same value twice, it will not saved in app. The lists will never have repeated values
-  - After a user has removed a value from the state, it is possible add it again.
+This small application allows a user to interact with data saved in the website.
 
 ## Technologies
 
